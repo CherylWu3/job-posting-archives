@@ -63,10 +63,10 @@ Page structure (single HTML file, lang zh-CN, system font stack incl. PingFang S
      with the API `description` HTML **embedded byte-for-byte unmodified**.
    - Sidebar cards: 职位信息 (职位性质/职位类别/所属部门/发布时间), 公司信息
      (favicon + company name), and an amber-bordered 存档信息 card (Job ID, Published,
-     Last Updated, API status + delisted note, archive date, original URL, API
-     endpoint, Wayback links).
-4. Amber citation card under the main card: BibTeX (`@misc`, with the Wayback snapshot
-   of the API URL in `note`) + Chicago style.
+     Last Updated / Closed, API status + delisted note, archive date, original URL,
+     API endpoint).
+4. Amber citation card under the main card: BibTeX (`@misc`, with the job ID and any
+   closed date in `note`, `url` = the API endpoint) + Chicago style.
 5. Dark footer: white logo, `© 北京月之暗面科技有限公司`, 京公网安备/京ICP lines.
 
 **Verification (required):** the exact API `description` string must be a substring of
@@ -75,16 +75,7 @@ inside the JD; annotations live only in the clearly-marked amber blocks.
 
 Filename convention: `<company>_<role-slug>_job_<published-date>.html`.
 
-## Step 3 — Archive the primary source in the Wayback Machine
-
-- The Wayback Machine **cannot** capture `#/job/...` SPA URLs (fragments are stripped),
-  and the portal home won't show a delisted job. Archive the **API URL** instead.
-- Check for an existing snapshot first:
-  `curl "http://archive.org/wayback/available?url=<api-url>"`
-- Save if needed: `curl -sL "https://web.archive.org/save/<api-url>" -w "%{url_effective}"`
-  — the final effective URL is the snapshot URL. Verify it serves the full JSON.
-
-## Step 4 — Publish via GitHub Pages
+## Step 3 — Publish via GitHub Pages
 
 In `~/job-posting-archives`:
 
@@ -93,19 +84,11 @@ In `~/job-posting-archives`:
    posted date, archived date, link).
 3. Commit and push to `main` (Pages auto-deploys; no action needed).
 4. Poll until live: `until curl -s -o /dev/null -w '%{http_code}' <pages-url> | grep -q 200; ...`
-   (first deploys take 1–3 min; use a background task, not foreground sleep).
-5. Wayback-save the Pages URL the same way as Step 3 and verify the snapshot.
+   (updates to an existing site deploy in well under a minute; use a background task,
+   not foreground sleep).
 
-## Step 5 — Report to the user
+## Step 4 — Report to the user
 
-Provide: (a) the GitHub Pages URL (readable copy for readers), (b) Wayback snapshot of
-the Pages URL, (c) Wayback snapshot of the API record (primary-source evidence), and
-(d) the suggested citation pairing: cite the Pages URL for access + the API snapshot as
-evidence.
-
-## Manual step (cannot be automated)
-
-archive.today (archive.ph) blocks scripted requests (HTTP 429 + CAPTCHA) but is the
-only archiver that renders JS and preserves `#` fragments. The user should paste the
-full original `...#/job/<jobId>` URL into archive.ph in a browser while the record is
-still served — this adds an independent third-party capture of the rendered page.
+Provide the GitHub Pages URL — that is the citation link. No Wayback Machine or
+archive.today submission (the user decided on 2026-06-11 that the GitHub Pages copy
+alone is sufficient; do not re-suggest external archiving services).
