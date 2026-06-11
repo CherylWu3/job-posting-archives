@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>云资源采购经理 - Kimi社会招聘</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+    * { box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        background-color: #F4F6FB;
+        color: #292C32;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    a { color: #0066FF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .archive-banner {
+        background-color: #FFF8E6;
+        border-bottom: 1px solid #F0DCA0;
+        color: #6B5618;
+        font-size: 13px;
+        line-height: 1.6;
+        padding: 10px 24px;
+        text-align: center;
+    }
+    .archive-banner a { color: #6B5618; text-decoration: underline; }
+
+    .site-nav {
+        background-color: #141933;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 0 32px;
+    }
+    .site-nav .logo { height: 36px; display: block; }
+    .portal-label {
+        background-color: #FFFFFF;
+        color: #000;
+        font-size: 12px;
+        border-radius: 4px;
+        padding: 2px 8px;
+        margin-left: 12px;
+    }
+    .site-nav .menus {
+        margin-left: auto;
+        display: flex;
+        gap: 40px;
+    }
+    .site-nav .menus span {
+        color: #FFFFFF;
+        font-size: 16px;
+        cursor: default;
+    }
+
+    .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 24px 48px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .main { flex: 1; min-width: 0; }
+    .aside { width: 320px; flex-shrink: 0; }
+
+    .card {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin-bottom: 16px;
+    }
+
+    .job-header { position: relative; padding-right: 180px; }
+    .job-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #141933;
+        margin: 0 0 12px 0;
+        line-height: 1.4;
+    }
+    .job-meta { color: #89909E; font-size: 14px; }
+    .job-meta .divider { margin: 0 10px; color: #DDE2EB; }
+    .apply-btn {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        display: inline-block;
+        background-color: #C9CDD4;
+        color: #FFFFFF !important;
+        font-size: 14px;
+        padding: 9px 32px;
+        border-radius: 300px;
+        text-decoration: none !important;
+        cursor: default;
+    }
+    .header-rule {
+        border: none;
+        border-top: 1px solid #EEF1F6;
+        margin: 24px 0;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #141933;
+        margin: 0 0 16px 0;
+    }
+    .section-title::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 16px;
+        border-radius: 2px;
+        background-color: #0066FF;
+        margin-right: 8px;
+    }
+
+    .job-description p { margin: 8px 0; }
+    .job-description ul { margin: 8px 0; padding-left: 22px; }
+    .job-description li { margin: 4px 0; }
+
+    .info-row { display: flex; margin: 10px 0; font-size: 14px; }
+    .info-row .label { color: #89909E; width: 80px; flex-shrink: 0; }
+    .info-row .value { color: #292C32; }
+
+    .org-row { display: flex; align-items: center; gap: 12px; }
+    .org-row img { width: 40px; height: 40px; border-radius: 8px; }
+    .org-name { font-size: 15px; font-weight: 600; color: #141933; }
+    .org-sub { font-size: 12px; color: #89909E; }
+
+    .archive-card {
+        background: #FFFDF5;
+        border: 1px solid #F0DCA0;
+        border-radius: 16px;
+        padding: 24px 32px;
+        margin-bottom: 16px;
+        font-size: 13px;
+    }
+    .archive-card .section-title::before { background-color: #D9A514; }
+    .archive-card .info-row .label { width: 130px; }
+    .archive-card .info-row { margin: 6px 0; font-size: 13px; }
+    .archive-card pre {
+        background: #FFFFFF;
+        border: 1px solid #EEE5C8;
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-size: 12px;
+        overflow-x: auto;
+        line-height: 1.6;
+    }
+    .status-badge {
+        display: inline-block;
+        padding: 1px 10px;
+        background-color: #F4F4F5;
+        color: #89909E;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .site-footer {
+        background-color: #141933;
+        padding: 40px 24px 32px;
+        text-align: center;
+    }
+    .site-footer img { height: 36px; margin-bottom: 16px; }
+    .site-footer .company { color: #FFFFFF; font-size: 13px; margin: 4px 0; }
+    .site-footer .filing { color: #89909E; font-size: 12px; margin: 4px 0; }
+
+    @media (max-width: 900px) {
+        .page { flex-direction: column; }
+        .aside { width: 100%; }
+        .job-header { padding-right: 0; }
+        .apply-btn { position: static; display: inline-block; margin-top: 16px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="archive-banner">
+    ⚠️ 存档副本 Archived Record — This is an archived copy of a job posting from Moonshot AI (月之暗面), preserved on 2026-06-11 for reference and citation.
+    The position was closed on 2026-05-19 and is no longer on the live careers portal. Page styling reproduces the original
+    <a href="https://app.mokahr.com/apply/moonshot/148506" target="_blank">Kimi社会招聘</a> site; the job description text is verbatim from the MokaHR API record.
+</div>
+
+<nav class="site-nav">
+    <img class="logo" src="data:image/png;base64,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" alt="月之暗面 Moonshot AI">
+    <span class="portal-label">社会招聘</span>
+    <div class="menus">
+        <span>首页</span><span>关于我们</span><span>社招职位</span><span>校招&amp;实习职位</span>
+    </div>
+</nav>
+
+<div class="page">
+    <div class="main">
+        <div class="card">
+            <div class="job-header">
+                <h1 class="job-title">云资源采购经理</h1>
+                <div class="job-meta">全职<span class="divider">|</span>运营类<span class="divider">|</span>发布于 2026-04-10</div>
+                <span class="apply-btn">已停止招聘</span>
+            </div>
+            <hr class="header-rule">
+            <h2 class="section-title">职位描述</h2>
+            <div class="job-description"><p>职位概述</p><p>负责公司公有云、混合云及云相关技术服务的采购与供应商管理，通过商务谈判、合同管理和供应保障，支持公司业务弹性扩展。与PMO、TPM及IDC专家紧密协同，确保云资源供应的稳定性与成本竞争力。</p><p><br></p><p>核心职责</p><p>云厂商商务谈判与采购执行</p><ul><li>全球云厂商谈判：主导AWS、Azure、GCP、阿里云、腾讯云、华为云、火山引擎等主流云服务商的商务谈判，包括预留实例（RI）、节省计划（Savings Plans）、按需折扣、EDP（企业折扣计划）、私有部署/专属云等模式</li><li>GPU云资源专项：负责GPU云实例的采购谈判与供应保障，支持AI训练/推理业务的弹性算力需求</li><li>合同管理：谈判并管理云厂商框架协议，监控SLA达成率（可用性、故障响应时效）、服务质量与合规条款，处理商务争议与续约谈判</li></ul><p>混合云与多云策略</p><ul><li>混合云架构采购：评估并执行公有云+私有云/智算中心的混合架构采购方案，平衡成本、性能、数据合规与供应商锁定风险</li><li>多云管理：建立多云供应商评估体系，定期进行市场调研与价格基准测试（Benchmarking），制定差异化采购策略</li></ul><p>云相关技术服务采购</p><ul><li>MLOps/AI平台采购：负责模型训练平台、数据标注工具、向量数据库、AI开发平台等云原生服务的选型与采购，管理订阅生命周期与版本升级</li><li>API/SDK服务采购：主导语音识别、图像生成、大模型API等技术服务的采购落地，评估技术兼容性、调用成本与业务时效性</li><li>云生态服务：采购云市场（Marketplace）中的第三方安全、监控、成本管理工具</li></ul><p>供应商关系与供应保障</p><ul><li>供应商分级管理：建立云厂商及云生态伙伴的评估体系（价格竞争力、技术支持、服务稳定性、合规记录），定期审核并优化供应商池</li><li>供应风险管理：监控云厂商产能、区域可用性、政策变化（如数据出境合规），建立多区域/多厂商的备选方案，确保关键业务连续性</li><li>用量监控与预警：与技术团队协作监控云资源用量趋势，提前预警库存不足或成本异常，协调扩容或切换方案</li></ul><p>成本管理与优化</p><ul><li>云成本分析：分析各业务线云支出结构（计算、存储、网络、数据传输），识别优化机会（如闲置资源清理、存储分层、网络路径优化）</li><li>采购策略优化：通过规模化采购、长期承诺折扣、 spot/抢占式实例策略等方式持续降低云资源单位成本</li><li>预算协同：与财务团队协作制定云资源年度预算，监控实际支出与预算偏差，提供月度成本分析报告</li></ul><p><br></p><p>任职要求</p><ul><li>本科及以上学历，3年以上云资源采购或企业云服务管理经验，有云厂商客户侧、云代理商或重度云使用企业背景者优先</li><li>精通云定价与商务模式：深入理解各云厂商的算力（GPU/CPU）、存储、网络、数据传输的计费逻辑、折扣体系与合同条款，具备亿元级云框架谈判经验</li><li>GPU云资源经验：熟悉主流云厂商的GPU实例类型、裸金属与虚拟化方案、计费模式（按量/包年/竞价），有大规模GPU云采购经验者优先</li><li>供应商资源：拥有AWS、Azure、阿里云、腾讯云等核心云厂商的直接商务对接渠道，了解云代理商与转售市场</li><li>商务谈判能力：具备与云厂商大客户总监级别对等谈判的能力，能在价格、账期、服务等级、技术支持等条款上争取最优条件</li><li>技术理解力：了解容器化（K8s）、Serverless、AI训练/推理工作负载的云资源消耗特征，能与技术团队高效对话，将技术需求转化为采购规格</li><li>数据分析能力：熟练使用Excel/BI工具进行云账单分析，建立成本监控模型，识别异常支出</li><li>合规意识：了解数据安全法、个人信息保护法、跨境数据流动合规要求，确保云采购路径符合法规</li></ul></div>
+        </div>
+
+        <div class="archive-card">
+            <h2 class="section-title">Citation Information</h2>
+            <p><strong>BibTeX:</strong></p>
+            <pre>@misc{moonshot_cloud_resource_procurement_2026,
+  author = {Moonshot AI},
+  title = {云资源采购经理},
+  year = {2026},
+  month = {April},
+  note = {Job posting ID: cd766b8e-7891-4826-ac04-fe83eb3bc169. Closed 2026-05-19.},
+  url = {https://api.mokahr.com/api-platform/v1/jobs/moonshot/cd766b8e-7891-4826-ac04-fe83eb3bc169},
+  urldate = {2026-06-11}
+}</pre>
+            <p><strong>Chicago Style:</strong><br>
+            Moonshot AI. "云资源采购经理." Moonshot Careers, April 10, 2026.
+            Accessed June 11, 2026. https://api.mokahr.com/api-platform/v1/jobs/moonshot/cd766b8e-7891-4826-ac04-fe83eb3bc169</p>
+        </div>
+    </div>
+
+    <div class="aside">
+        <div class="card">
+            <h2 class="section-title">职位信息</h2>
+            <div class="info-row"><span class="label">职位性质</span><span class="value">全职</span></div>
+            <div class="info-row"><span class="label">职位类别</span><span class="value">运营类</span></div>
+            <div class="info-row"><span class="label">所属部门</span><span class="value">$ Team</span></div>
+            <div class="info-row"><span class="label">发布时间</span><span class="value">2026-04-10</span></div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">公司信息</h2>
+            <div class="org-row">
+                <img src="data:image/png;base64,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" alt="Kimi">
+                <div>
+                    <div class="org-name">月之暗面</div>
+                    <div class="org-sub">Moonshot AI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="archive-card">
+            <h2 class="section-title">存档信息 Archive Record</h2>
+            <div class="info-row"><span class="label">Job ID</span><span class="value">cd766b8e-7891-4826-ac04-fe83eb3bc169</span></div>
+            <div class="info-row"><span class="label">Published</span><span class="value">2026-04-10T03:51:04Z</span></div>
+            <div class="info-row"><span class="label">Closed</span><span class="value">2026-05-19T13:29:39Z</span></div>
+            <div class="info-row"><span class="label">API Status</span><span class="value"><span class="status-badge">closed</span> (delisted from portal)</span></div>
+            <div class="info-row"><span class="label">Archived</span><span class="value">2026-06-11</span></div>
+            <div class="info-row"><span class="label">Original URL</span><span class="value"><a href="https://app.mokahr.com/social-recruitment/moonshot/148506?locale=zh-CN#/job/cd766b8e-7891-4826-ac04-fe83eb3bc169" target="_blank">app.mokahr.com/social-recruitment/moonshot/…/cd766b8e</a></span></div>
+            <div class="info-row"><span class="label">API Endpoint</span><span class="value"><a href="https://api.mokahr.com/api-platform/v1/jobs/moonshot/cd766b8e-7891-4826-ac04-fe83eb3bc169" target="_blank">api.mokahr.com/…/cd766b8e</a></span></div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <img src="data:image/png;base64,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" alt="月之暗面 Moonshot AI">
+    <div class="company">© 2024-2025 北京月之暗面科技有限公司</div>
+    <div class="filing">京公网安备 11010802024479号&nbsp;&nbsp;京ICP备15060035号-3</div>
+</footer>
+
+</body>
+</html>
