@@ -34,7 +34,25 @@ For MokaHR-hosted postings (URL shape `https://app.mokahr.com/apply/<org>/<siteI
    `jobs` = currently listed postings; absence there + API `status: open` means
    "delisted but record still served".
 
-For non-Moka pages: fetch the page, identify any underlying JSON/API the content comes
+For Feishu Hire portals (URL shape `https://<tenant>.jobs.feishu.cn/index/position/<id>/detail`,
+e.g. MiniMax at tenant `vrfi1sk8a0`):
+
+1. The job record API: `https://<tenant>.jobs.feishu.cn/api/v1/job/posts/<id>` →
+   `data.job_post_detail` with `title`, `description` and `requirement` (both **plain
+   text** with newlines, not HTML), `job_category.name`, `recruit_type` (parent =
+   社招/校招, self = 全职), `city_list`, `publish_time` (epoch ms).
+2. Portal branding is embedded in the detail page HTML (fetch with a browser UA):
+   search for `"web_ui_config"` → `theme_color` (MiniMax: `#de1f84`), `slogan`
+   (MiniMax: `MiniMax社招`), `navigation_bar_img_url` (logo), `tenant_name`.
+3. Page template differences from Moka: white nav (logo + slogan, menus 首页/职位列表/
+   校招), grey tag chips for 社招/全职/city/category, theme-color apply button
+   (radius 6px, label 投递简历), sections 职位描述 + 职位要求 rendered in a
+   `white-space: pre-line` div with the raw text embedded unmodified (verify both are
+   exact substrings of the final file), footer "本招聘网站由 飞书招聘 提供招聘管理服务".
+4. Only include facts from the record/portal config — don't add outside knowledge
+   (e.g. legal entity names) to the page.
+
+For other platforms: fetch the page, identify any underlying JSON/API the content comes
 from, and treat that as the authoritative record; otherwise use the rendered HTML text.
 
 ## Step 2 — Build the styled, self-contained archive page
