@@ -9,3 +9,4 @@ Each page reproduces the original posting's text verbatim (retrieved from the so
 | Company | Position | Posted | Archived | Page |
 |---|---|---|---|---|
 | Moonshot AI (月之暗面) | IDC机房采购专家（智算中心方向） | 2026-04-10 | 2026-06-11 | [view](https://cherylwu3.github.io/job-posting-archives/moonshot_idc_procurement_job_2026-04-10.html) |
+| Moonshot AI (月之暗面) | PMO负责人/高级项目经理（AI算力采购与云资源方向） | 2026-04-09 | 2026-06-11 | [view](https://cherylwu3.github.io/job-posting-archives/moonshot_pmo_compute_procurement_job_2026-04-09.html) |
