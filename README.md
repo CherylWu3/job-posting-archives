@@ -15,3 +15,4 @@ Each page reproduces the original posting's text verbatim (retrieved from the so
 | Zhipu AI (智谱) | Z-lab-机器人环境感知算法工程师 | 2026-04-07 | 2026-06-11 | [view](https://cherylwu3.github.io/job-posting-archives/zhipu_zlab_robot_perception_job_2026-04-07.html) |
 | MiniMax | EDA 工具链数据架构师（AI训练方向） | 2026-04-10 | 2026-06-11 | [view](https://cherylwu3.github.io/job-posting-archives/minimax_eda_toolchain_data_architect_job_2026-04-10.html) |
 | DeepSeek (via RedNote) | 模型策略 PM（角色扮演方向，实习） | — | 2026-06-16 | [view](https://cherylwu3.github.io/job-posting-archives/deepseek_model_strategy_pm_intern_rednote_2026-06-16.html) |
+| MiniMax | 采购经理（算力/硬件/数据品类方向） | 2026-03-16 | 2026-06-16 | [view](https://cherylwu3.github.io/job-posting-archives/minimax_procurement_manager_job_2026-03-16.html) |
