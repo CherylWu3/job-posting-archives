@@ -52,6 +52,22 @@ e.g. MiniMax at tenant `vrfi1sk8a0`):
 4. Only include facts from the record/portal config — don't add outside knowledge
    (e.g. legal entity names) to the page.
 
+For social-media / login-walled recruitment posts (e.g. Xiaohongshu / RedNote,
+`xiaohongshu.com/explore/<noteId>`): these have no public API and usually sit behind a
+login wall, so the user pastes the text. This is a **transcript, not a machine-verified
+capture** — be explicit about that in the provenance:
+- Archive banner and the 存档信息 card must state "text provided by user; original
+  behind login wall; not an automated capture."
+- `Retrieval` field = "Text provided by user", not an API endpoint.
+- Embed every pasted line verbatim and assert each is a substring of the output before
+  publishing (same verbatim discipline, even without an API to diff against).
+- Style to evoke the source (RedNote: brand red `#FF2442`, note card with author row +
+  关注 button, hashtags in link blue, a non-numeric like/collect/comment bar — never
+  fabricate engagement counts) and add a footer noting it's an unaffiliated reconstruction.
+- Keep contact details (emails, names) that are part of the public post — they are the
+  record. Use `howpublished`/note in BibTeX to mark it an informal post; there may be no
+  reliable publish date (use "—" in the README date column, archive date in the filename).
+
 For other platforms: fetch the page, identify any underlying JSON/API the content comes
 from, and treat that as the authoritative record; otherwise use the rendered HTML text.
 
